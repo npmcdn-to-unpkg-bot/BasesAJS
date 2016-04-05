@@ -5,12 +5,6 @@
     <title>Base para aplicaciones moviles</title>
   </head>
   <body ng-app="app">
-    <div class="" ng-controller="Usuario as vmUsuario">
-      {{ vmUsuario.nombre }}
-
-      <input type="text" ng-model="vmUsuario.textInput">
-      {{ vmUsuario.textInput }}
-    </div>
 
     <div class="" ng-controller="Autos as vmAutos">
       <ul>
@@ -20,12 +14,15 @@
       </ul>
 
     </div>
-    <script src="angular-1.5.3/angular.js" charset="utf-8"></script>
+    <script src="app/angular-1.5.3/angular.js" charset="utf-8"></script>
+    <script src="app/angular-1.5.3/angular-route.js" charset="utf-8"></script>
 
-    <script src="app.js" charset="utf-8"></script>
+    <script src="app/app.js" charset="utf-8"></script>
+    <script src="app/usuarios/module.js" charset="utf-8"></script>
+    <script src="app/usuarios/controlador.js" charset="utf-8"></script>
+    <script src="app/usuarios/routes.js" charset="utf-8"></script>
 
-    <script src="usuarios/controlador.js" charset="utf-8"></script>
-    <script src="autos/factory.js" charset="utf-8"></script>
-    <script src="autos/controlador.js" charset="utf-8"></script>
+    <script src="app/autos/factory.js" charset="utf-8"></script>
+    <script src="app/autos/controlador.js" charset="utf-8"></script>
   </body>
 </html>
