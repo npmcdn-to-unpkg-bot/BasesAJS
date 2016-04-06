@@ -21,5 +21,6 @@
     var vm = this;
     vm.nombre = "Miguel";
     vm.textInput = "";
+    vm.usuarios = ["Miguel", "Pedro", "Alex", "Juan"];
   }
 })();

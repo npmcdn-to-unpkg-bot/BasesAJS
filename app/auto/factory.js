@@ -1,16 +1,16 @@
 /**
- * Autos Factory
+ * Auto Factory
  * @namespace Factories
  */
 
 (function() {
   'use strict';
   angular
-      .module('app.autos.factory', [])
+      .module('app.auto.factory', [])
       .factory('Marcas', Marcas);
 
   /**
-   * @namespace Autos
+   * @namespace Auto
    * @desc Obtiene marcas de Autos
    * @memberOf Factories
    */
@@ -33,8 +33,8 @@
         var paises = {
           "japon": ["Suzuki", "Mazda"],
           "usa": ["Ford", "Chevrolet"]
-        }
+        };
         return paises[pais];
-      };
+      }
   }
 })();

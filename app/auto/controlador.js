@@ -1,22 +1,22 @@
 /**
- * Autos Controller
+ * Auto Controller
  * @namespace Controller
  */
 
 (function() {
   'use strict';
   angular
-    .module('app.autos', ['app.autos.factory'])
-    .controller("Autos", Autos);
-  Autos.$inject = ["Marcas"];
+    .module('app.auto', ['app.auto.factory'])
+    .controller("Auto", Auto);
+  Auto.$inject = ["Marcas"];
 
   /**
-   * @namespace Autos
+   * @namespace Auto
    * @desc Mostrar marcas de Autos
    * @memberOf Controller
    */
 
-  function Autos(Marcas) {
+  function Auto(Marcas) {
     /* jshint validthis: true */
     var vm = this;
     vm.marcas = Marcas.porPais("usa");

@@ -1,28 +1,44 @@
 <!DOCTYPE html>
-<html>
+<html ng-app="app" ng-strict-di>
   <head>
-    <meta charset="utf-8">
-    <title>Base para aplicaciones moviles</title>
+    <meta />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no" />
+    <title ng-bind="title"></title>
+
+    <style>
+        /* This helps the ng-show/ng-hide animations start at the right place. */
+        /* Since Angular has this but needs to load, this gives us the class early. */
+        .ng-hide {
+            display: none!important;
+        }
+    </style>
   </head>
-  <body ng-app="app">
+  <body>
+    <div ng-view></div>
 
-    <div class="" ng-controller="Autos as vmAutos">
-      <ul>
-        <li ng-repeat="marca in vmAutos.marcas">
-          {{ marca }}
-        </li>
-      </ul>
+    <script src="app/lib/jquery.js"></script>
+    <script src="app/angular-1.5.3/angular.js"></script>
+    <script src="app/angular-1.5.3/angular-animate.js"></script>
+    <script src="app/angular-1.5.3/angular-route.js"></script>
+    <script src="app/angular-1.5.3/angular-sanitize.js"></script>
 
-    </div>
-    <script src="app/angular-1.5.3/angular.js" charset="utf-8"></script>
-    <script src="app/angular-1.5.3/angular-route.js" charset="utf-8"></script>
+    <!-- Bootstrapping -->
+    <script src="app/app.js"></script>
 
-    <script src="app/app.js" charset="utf-8"></script>
-    <script src="app/usuarios/module.js" charset="utf-8"></script>
-    <script src="app/usuarios/controlador.js" charset="utf-8"></script>
-    <script src="app/usuarios/routes.js" charset="utf-8"></script>
+    <!-- core module -->
+    <script src="app/core/core.module.js"></script>
+    <script src="app/core/config.js"></script>
 
-    <script src="app/autos/factory.js" charset="utf-8"></script>
-    <script src="app/autos/controlador.js" charset="utf-8"></script>
+
+    <script src="app/usuario/module.js"></script>
+    <script src="app/usuario/routes.js"></script>
+    <script src="app/usuario/controlador.js"></script>
+
+    <script src="app/auto/module.js"></script>
+    <script src="app/auto/routes.js"></script>
+    <script src="app/auto/factory.js"></script>
+    <script src="app/auto/controlador.js"></script>
+
   </body>
 </html>

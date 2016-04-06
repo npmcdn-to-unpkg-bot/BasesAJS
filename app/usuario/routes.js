@@ -5,19 +5,20 @@
     .module('app.usuario')
     .run(appRun);
 
+  appRun.$inject = [];
+
   function appRun() {
-    return getRoutes()
+    getRoutes();
   }
 
   function getRoutes() {
     return [
       {
-        url: '/usuarios',
+        url: '/usuario',
         config: {
-            templateUrl: 'app/usuarios/usuarios.html',
+            templateUrl: 'app/usuario/usuario.html',
             controller: 'Usuario',
             controllerAs: 'vm',
-            title: 'usuarios',
         }
       }
     ];
