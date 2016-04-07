@@ -1,15 +1,7 @@
 (function() {
   'use strict';
 
-  angular
-    .module('app.auto')
-    .run(appRun);
-
-    appRun.$inject = [];
-
-    function appRun() {
-      getRoutes();
-    }
+  angular.module('app.auto');
 
   function getRoutes() {
     return [

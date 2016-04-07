@@ -1,15 +1,7 @@
 (function() {
   'use strict';
 
-  angular
-    .module('app.usuario')
-    .run(appRun);
-
-  appRun.$inject = [];
-
-  function appRun() {
-    getRoutes();
-  }
+  angular.module('app.usuario');
 
   function getRoutes() {
     return [

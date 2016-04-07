@@ -8,7 +8,7 @@
   angular
     .module('app.auto', ['app.auto.factory'])
     .controller("Auto", Auto);
-  Auto.$inject = ["Marcas"];
+  Auto.$inject = ["Marcas", "$log"];
 
   /**
    * @namespace Auto
@@ -16,9 +16,10 @@
    * @memberOf Controller
    */
 
-  function Auto(Marcas) {
+  function Auto(Marcas, $log) {
     /* jshint validthis: true */
     var vm = this;
     vm.marcas = Marcas.porPais("usa");
+    $log.debug("Hola Mundo");
   }
 })();
